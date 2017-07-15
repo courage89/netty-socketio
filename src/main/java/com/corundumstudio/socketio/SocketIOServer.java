@@ -257,4 +257,10 @@ public class SocketIOServer implements ClientListeners {
     }
 
 
+    public static void main(String[] args) {
+        Configuration configuration = new Configuration();
+        SocketIOServer socketIOServer = new SocketIOServer(configuration);
+        socketIOServer.start();
+    }
+
 }

@@ -36,8 +36,11 @@ public class Configuration {
 
     private List<Transport> transports = Arrays.asList(Transport.WEBSOCKET, Transport.POLLING);
 
-    private int bossThreads = 0; // 0 = current_processors_amount * 2
-    private int workerThreads = 0; // 0 = current_processors_amount * 2
+    private int bossThreads = 2; // 0 = current_processors_amount * 2
+    private int workerThreads = 2; // 0 = current_processors_amount * 2
+
+//    private int bossThreads = 0; // 0 = current_processors_amount * 2
+//    private int workerThreads = 0; // 0 = current_processors_amount * 2
     private boolean useLinuxNativeEpoll;
 
     private boolean allowCustomRequests = false;
@@ -52,7 +55,8 @@ public class Configuration {
 
     private String packagePrefix;
     private String hostname;
-    private int port = -1;
+//    private int port = -1;
+    private int port = 8081;
 
     private String sslProtocol = "TLSv1";
 
